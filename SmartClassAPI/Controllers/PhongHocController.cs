@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using SmartClassAPI.Model;
 using SmartClassAPI.Repository.PhongHocRepo;
 
@@ -24,20 +25,41 @@ namespace SmartClassAPI.Controllers
         {
             try
             {
-                return Ok(_phonghocRepo.Add(phonghoc));
+                _phonghocRepo.Add(phonghoc);
+                return new JsonResult("Thêm Thành Công");
             }
             catch
             {
-                return BadRequest();
+                return new JsonResult("Thêm Thất Bại");
+            }
+        }
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, PhongHocVM phongHoc)
+        {
+            try
+            {
+                _phonghocRepo.Update(id, phongHoc);
+                return new JsonResult("Đã Cập Nhật");
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            if (id <= 0)
-                return BadRequest("Khong co du lieu");
-            _phonghocRepo?.Delete(id);
-            return new JsonResult("Xoa thanh cong");
+            try
+            {
+                if (id <= 0) return BadRequest("Không có dữ liệu");
+                _phonghocRepo.Delete(id);
+                return new JsonResult("Đã xóa phòng Học");
+            }
+            catch
+            {
+                return new JsonResult("Đã có lỗi xảy ra");
+            }
+
         }
     }
 }
