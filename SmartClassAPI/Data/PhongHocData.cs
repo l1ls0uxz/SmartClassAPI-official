@@ -12,11 +12,10 @@ namespace SmartClassAPI.Data
         public int IdPhongHoc { get; set; }
         [Required]
         public string MaPhongHoc { get; set; }
-        [Required]
         public string TenPhongHoc { set; get; }
-        [Required, NotNull]
+        public string MoTa { get; set; }
         public int TinhTrang { get; set; }
-        [Required]
+        [Required, NotNull]
         //public int? IdMonHoc { get; set; }
         public List<MonHoc> MonHocs { get; set; }
         //public MonHoc MonHoc { get; set; }

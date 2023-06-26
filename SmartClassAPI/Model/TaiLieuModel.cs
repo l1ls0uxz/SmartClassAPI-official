@@ -1,4 +1,5 @@
 ﻿using SmartClassAPI.Data;
+using System;
 
 namespace SmartClassAPI.Model
 {
@@ -10,6 +11,7 @@ namespace SmartClassAPI.Model
         public string TenMonHoc { get; set; }
         public int? IdUser { get; set; }
         public string HoTen { get; set; }
+        public DateTime? NgayTai { get; set; } 
     }
     public class TaiLieuVM : TaiLieuModel
     {

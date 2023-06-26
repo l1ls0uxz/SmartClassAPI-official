@@ -21,6 +21,7 @@ namespace SmartClassAPI.Repository.TaiLieuRepo
                 IdMonHoc = taiLieu.IdMonHoc,
                 IdUser = taiLieu.IdUser,
                 UrlTaiLieu = taiLieu.UrlTaiLieu,
+                NgayTai = taiLieu.NgayTai,
             };
             _context.Add(_taiLieu);
             _context.SaveChanges();
@@ -31,6 +32,7 @@ namespace SmartClassAPI.Repository.TaiLieuRepo
                 IdMonHoc = _taiLieu.IdMonHoc,
                 IdUser = _taiLieu.IdUser,
                 UrlTaiLieu = _taiLieu.UrlTaiLieu,
+                NgayTai = _taiLieu.NgayTai,
             };
         }
 
@@ -55,6 +57,7 @@ namespace SmartClassAPI.Repository.TaiLieuRepo
                 IdUser = tl.IdUser,
                 HoTen = tl.User.HoTen,
                 UrlTaiLieu = tl.UrlTaiLieu,
+                NgayTai = tl.NgayTai,
             });
             return taiLieu.ToList();
         }
@@ -74,6 +77,7 @@ namespace SmartClassAPI.Repository.TaiLieuRepo
                     IdMonHoc = taiLieu.IdMonHoc,
                     IdUser = taiLieu.IdUser,
                     UrlTaiLieu = taiLieu.UrlTaiLieu,
+                    NgayTai = taiLieu.NgayTai,
                 };
             }
         }
@@ -88,6 +92,7 @@ namespace SmartClassAPI.Repository.TaiLieuRepo
                 _taiLieu.IdMonHoc = taiLieu.IdMonHoc;
                 _taiLieu.IdUser = taiLieu.IdUser;
                 _taiLieu.UrlTaiLieu = taiLieu.UrlTaiLieu;
+                _taiLieu.NgayTai = taiLieu.NgayTai;
             }
             _context.SaveChanges();
         }
