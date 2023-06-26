@@ -33,6 +33,7 @@ namespace SmartClassAPI.Controllers
                 return Ok(phongHoc);
             }
         }
+
         [HttpPost]
         public IActionResult Add(PhongHocModel phonghoc)
         {
