@@ -20,6 +20,19 @@ namespace SmartClassAPI.Controllers
         {
             return Ok(_phonghocRepo.GetAll());
         }
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            var phongHoc = _phonghocRepo.GetById(id);
+            if (phongHoc == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(phongHoc);
+            }
+        }
         [HttpPost]
         public IActionResult Add(PhongHocModel phonghoc)
         {

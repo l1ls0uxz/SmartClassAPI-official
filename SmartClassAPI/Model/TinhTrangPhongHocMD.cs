@@ -1,8 +1,8 @@
 ﻿namespace SmartClassAPI.Model
 {
-    public class TinhTrangBuoiHocMD
+    public class TinhTrangPhongHocMD
     {
-        public int IdTinhTrang { get; set; }
+        public int IdTinhTrang { get ; set; }
         public string TenTinhTrang { get; set; }
         public string? MoTa { get; set; }
     }
