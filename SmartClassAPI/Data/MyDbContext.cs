@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SmartClassAPI.Migrations;
 
 namespace SmartClassAPI.Data
 {
@@ -18,6 +19,7 @@ namespace SmartClassAPI.Data
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<QuanLyBuoiHoc> QuanLyBuoiHoc { get; set; }
         public DbSet<TinhTrangBuoiHoc> TinhTrangBuoiHocs { get; set; }
+        public DbSet<TinhTrangPhongHoc> TinhTrangPhongHocs { get; set; }
         public DbSet<NhanDienData> NhanDienDatas { get; set; }
         public DbSet<CanhBao> CanhBaos { get; set; }
         #endregion

@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SmartClassAPI.Data
@@ -10,6 +9,6 @@ namespace SmartClassAPI.Data
         [Key]
         public int IdTinhTrang { get; set; }
         public string TenTinhTrang { get; set; }
-        public string? MoTa { get; set; }
+        public string? MoTa { get ; set; }
     }
 }
