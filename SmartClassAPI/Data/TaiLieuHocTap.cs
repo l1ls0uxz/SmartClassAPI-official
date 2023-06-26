@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SmartClassAPI.Data
@@ -18,6 +19,7 @@ namespace SmartClassAPI.Data
         public int? IdUser { get; set; }
         [ForeignKey("IdUser")]
         public User User { get; set; }
+        public DateTime? NgayTai { get; set;}
         // public string HoTen { get; set; }
     }
 }

@@ -11,7 +11,6 @@ namespace SmartClassAPI.Data
         [Required, MaxLength(200)]
         [Column(TypeName = "Nvarchar")]
         public string HoTen { get; set; }
-
         [Required, Column(TypeName = "varchar"), MaxLength(50)]
         public string UserName { get; set; }
         public string MatKhau { get; set; }
