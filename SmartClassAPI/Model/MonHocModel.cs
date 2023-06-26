@@ -19,7 +19,6 @@ namespace SmartClassAPI.Model
         public int IdMonHoc { get; set; }
         public string MaLopHoc { get; set; }
         public string HoTen { get; set; }
-
         public string TenTinhTrang { get; set; }
         public User User { get; set; }
         public LopHoc LopHoc { get; set; }
