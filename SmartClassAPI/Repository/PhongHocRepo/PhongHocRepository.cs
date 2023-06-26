@@ -38,8 +38,12 @@ namespace SmartClassAPI.Repository.PhongHocRepo
             var phongHocs = _context.PhongHocDatas.Select(ph => new PhongHocVM
             {
                 IdPhongHoc = ph.IdPhongHoc,
+                MaPhongHoc = ph.MaPhongHoc,
                 TenPhongHoc = ph.TenPhongHoc,
+                MoTa = ph.MoTa,
+                TinhTrang = ph.TinhTrang,
                 MonHocs = ph.MonHocs.ToList(),
+
             });
             return phongHocs.ToList();
         }

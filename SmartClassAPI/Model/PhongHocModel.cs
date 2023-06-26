@@ -7,6 +7,7 @@ namespace SmartClassAPI.Model
     {
         public string TenPhongHoc { get; set; }
         public string MaPhongHoc { get; set; }
+        public string MoTa { get; set; }
         public int TinhTrang { get; set; }
     }
     public class PhongHocVM : PhongHocModel
