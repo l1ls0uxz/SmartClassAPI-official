@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SmartClassAPI.Model;
 using SmartClassAPI.Repository.MonHocRepo;
+using System;
 
 namespace SmartClassAPI.Controllers
 {
@@ -65,14 +66,15 @@ namespace SmartClassAPI.Controllers
             _monHocRepo.Add(monHoc);
             return new JsonResult("Đã Thêm Môn Học");
         }
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-			if (id <= 0)
-				return BadRequest("Không có dữ liệu");
-	
-			_monHocRepo.Delete(id);
-                return new JsonResult("Đã Xóa Môn Học");
+            if (id <= 0)
+                return BadRequest("Không có dữ liệu");
+
+            _monHocRepo.Delete(id);
+            return new JsonResult("Đã Xóa Môn Học");
         }
     }
 }

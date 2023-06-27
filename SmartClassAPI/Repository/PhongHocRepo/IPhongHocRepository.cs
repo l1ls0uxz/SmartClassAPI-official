@@ -6,6 +6,7 @@ namespace SmartClassAPI.Repository.PhongHocRepo
     public interface IPhongHocRepository
     {
         List<PhongHocVM> GetAll();
+        //List<PhongHocVM> GetTinhTrang(int id);
         PhongHocVM GetById(int id);
         PhongHocVM Add(PhongHocModel phongHoc);
 

@@ -43,9 +43,22 @@ namespace SmartClassAPI.Controllers
             }
             catch
             {
-                return new JsonResult("Thêm Thất Bại");
+                return new JsonResult("Hãy điền đầy đủ thông tin!!");
             }
         }
+        //[HttpGet("/api/TinhTrang/{id}")]
+        //public IActionResult GetTinhTrang(int id)
+        //{
+        //	var phongHoc = _phonghocRepo.GetTinhTrang(id);
+        //	if (phongHoc == null)
+        //	{
+        //		return NotFound();
+        //	}
+        //	else
+        //	{
+        //		return Ok(phongHoc);
+        //	}
+        //}
         [HttpPut("{id}")]
         public IActionResult Update(int id, PhongHocVM phongHoc)
         {
@@ -70,7 +83,7 @@ namespace SmartClassAPI.Controllers
             }
             catch
             {
-                return new JsonResult("Đã có lỗi xảy ra");
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
 
         }

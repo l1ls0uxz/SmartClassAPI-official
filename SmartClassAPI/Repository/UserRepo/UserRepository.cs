@@ -23,6 +23,7 @@ namespace SmartClassAPI.Repository.UserRepo
             {
                 HoTen = user.HoTen,
                 UserName = user.UserName,
+                //MatKhau = user.MatKhau,
                 DiaChi = user.DiaChi,
                 Email = user.Email,
                 DienThoai = user.DienThoai,
@@ -73,6 +74,7 @@ namespace SmartClassAPI.Repository.UserRepo
                 IdUser = u.IdUser,
                 HoTen = u.HoTen,
                 UserName = u.UserName,
+                //MatKhau = u.MatKhau,
                 DiaChi = u.DiaChi,
                 Email = u.Email,
                 DienThoai = u.DienThoai,
