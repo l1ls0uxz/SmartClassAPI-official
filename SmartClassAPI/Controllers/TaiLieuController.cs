@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using SmartClassAPI.Model;
 using SmartClassAPI.Repository.TaiLieuRepo;
 
@@ -24,11 +25,12 @@ namespace SmartClassAPI.Controllers
         {
             try
             {
-                return Ok(_taiLieuRepo.Add(taiLieu));
+                _taiLieuRepo.Add(taiLieu);
+                return new JsonResult("Thêm Thành Công");
             }
             catch
             {
-                return BadRequest();
+                return new JsonResult("Hãy điền đầy đủ thông tin!!");
             }
         }
         [HttpPut("{id}")]
@@ -47,8 +49,16 @@ namespace SmartClassAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _taiLieuRepo.Delete(id);
-            return NoContent();
+            try
+            {
+                if (id <= 0) return BadRequest("Không có dữ liệu");
+                _taiLieuRepo.Delete(id);
+                return new JsonResult("Đã xóa phòng Học");
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
         }
     }
 }
