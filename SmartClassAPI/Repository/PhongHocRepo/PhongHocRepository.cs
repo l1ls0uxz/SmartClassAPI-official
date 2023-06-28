@@ -21,7 +21,7 @@ namespace SmartClassAPI.Repository.PhongHocRepo
                 TenPhongHoc = phongHoc.TenPhongHoc,
                 MaPhongHoc = phongHoc.MaPhongHoc,
                 MoTa = phongHoc.MoTa,
-                TinhTrang = phongHoc.TinhTrang,
+                IdTinhTrang = phongHoc.IdTinhTrang,
             };
             _context.Add(_phonghoc);
             _context.SaveChanges();
@@ -50,7 +50,7 @@ namespace SmartClassAPI.Repository.PhongHocRepo
                     MaPhongHoc = ph.MaPhongHoc,
                     TenPhongHoc = ph.TenPhongHoc,
                     MoTa = ph.MoTa,
-                    TinhTrang = ph.TinhTrang,
+                    IdTinhTrang = ph.IdTinhTrang,
                     MonHocs = ph.MonHocs.ToList(),
                 })
                 .ToList();
@@ -68,7 +68,7 @@ namespace SmartClassAPI.Repository.PhongHocRepo
                     MaPhongHoc = _phongHoc.MaPhongHoc,
                     TenPhongHoc = _phongHoc.TenPhongHoc,
                     MoTa = _phongHoc.MoTa,
-                    TinhTrang = _phongHoc.TinhTrang,
+                    IdTinhTrang = _phongHoc.IdTinhTrang,
                     MonHocs = _phongHoc.MonHocs.ToList(),
                 };
             }

@@ -39,7 +39,7 @@ namespace SmartClassAPI.Controllers
             if (taiLieu.IdTaiLieu == id)
             {
                 _taiLieuRepo.Update(id, taiLieu);
-                return NoContent();
+                return new JsonResult("Đã Cập Nhật");
             }
             else
             {
@@ -53,7 +53,7 @@ namespace SmartClassAPI.Controllers
             {
                 if (id <= 0) return BadRequest("Không có dữ liệu");
                 _taiLieuRepo.Delete(id);
-                return new JsonResult("Đã xóa phòng Học");
+                return new JsonResult("Đã xóa tài liệu");
             }
             catch
             {
