@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartClassAPI.Data;
 
 namespace SmartClassAPI.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230627081657_v15-changed_IdTinhTrang")]
+    partial class v15changed_IdTinhTrang
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -225,8 +227,6 @@ namespace SmartClassAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdPhongHoc");
-
-                    b.HasIndex("IdTinhTrang");
 
                     b.ToTable("PhongHoc");
                 });
@@ -515,17 +515,6 @@ namespace SmartClassAPI.Migrations
                         .HasForeignKey("IdUser");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("SmartClassAPI.Data.PhongHocData", b =>
-                {
-                    b.HasOne("SmartClassAPI.Data.TinhTrangPhongHoc", "TinhTrang")
-                        .WithMany()
-                        .HasForeignKey("IdTinhTrang")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("TinhTrang");
                 });
 
             modelBuilder.Entity("SmartClassAPI.Data.QuanLyBuoiHoc", b =>

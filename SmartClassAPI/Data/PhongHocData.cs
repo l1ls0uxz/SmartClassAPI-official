@@ -14,13 +14,13 @@ namespace SmartClassAPI.Data
         public string MaPhongHoc { get; set; }
         public string TenPhongHoc { set; get; }
         public string MoTa { get; set; }
-        public int TinhTrang { get; set; }
+        public int IdTinhTrang { get; set; }
+        [ForeignKey("IdTinhTrang")]
+        public TinhTrangPhongHoc TinhTrang { get; set; }
         [Required, NotNull]
-        //public string TenTinhTrang { get; set; }
         //public int? IdMonHoc { get; set; }
         public List<MonHoc> MonHocs { get; set; }
         //public MonHoc MonHoc { get; set; }
-
         // tạo ra các kết nối
         public ICollection<TkbData> TkbDatas { get; set; }
 

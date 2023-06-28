@@ -10,13 +10,14 @@ namespace SmartClassAPI.Model
         //public User User { get; set; }
         public string TenHocSinh { get; set; }
         public string MaLopHoc { get; set; }
-        public string MatKhau { get; set; }
+        public string MatKhau { get; set; }   // Mới thêm ở đây
         public string TenLoai { get; set; }
     }
     public class UserModel
     {
         public string HoTen { get; set; }
         public string UserName { get; set; }
+        public string MatKhau { get; set; }  // Mới thêm ở đây
         public string Email { get; set; }
         public string DienThoai { get; set; }
         public string DiaChi { get; set; }

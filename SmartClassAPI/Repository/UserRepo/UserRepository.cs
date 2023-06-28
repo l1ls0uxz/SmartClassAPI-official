@@ -23,7 +23,7 @@ namespace SmartClassAPI.Repository.UserRepo
             {
                 HoTen = user.HoTen,
                 UserName = user.UserName,
-                //MatKhau = user.MatKhau,
+                MatKhau = user.MatKhau, // Mới thêm ở đây
                 DiaChi = user.DiaChi,
                 Email = user.Email,
                 DienThoai = user.DienThoai,
@@ -47,6 +47,7 @@ namespace SmartClassAPI.Repository.UserRepo
             {
                 HoTen = _user.HoTen,
                 UserName = _user.UserName,
+                MatKhau = _user.MatKhau, // Mới thêm ở đây
                 DiaChi = _user.DiaChi,
                 Email = _user.Email,
                 DienThoai = _user.DienThoai,
@@ -74,7 +75,7 @@ namespace SmartClassAPI.Repository.UserRepo
                 IdUser = u.IdUser,
                 HoTen = u.HoTen,
                 UserName = u.UserName,
-                //MatKhau = u.MatKhau,
+                MatKhau = u.MatKhau,  // Mới thêm ở đây
                 DiaChi = u.DiaChi,
                 Email = u.Email,
                 DienThoai = u.DienThoai,
@@ -94,6 +95,7 @@ namespace SmartClassAPI.Repository.UserRepo
                 IdUser = u.IdUser,
                 HoTen = u.HoTen,
                 UserName = u.UserName,
+                MatKhau = u.MatKhau,  // Mới thêm ở đây
                 DiaChi = u.DiaChi,
                 Email = u.Email,
                 DienThoai = u.DienThoai,
@@ -121,6 +123,7 @@ namespace SmartClassAPI.Repository.UserRepo
                     {
                         IdUser = user.IdUser,
                         UserName = user.UserName,
+                        MatKhau = user.MatKhau,  // Mới thêm ở đây
                         HoTen = user.HoTen,
                         DiaChi = user.DiaChi,
                         Email = user.Email,
@@ -139,6 +142,7 @@ namespace SmartClassAPI.Repository.UserRepo
                     {
                         IdUser = user.IdUser,
                         UserName = user.UserName,
+                        MatKhau = user.MatKhau,  // Mới thêm ở đây
                         HoTen = user.HoTen,
                         DiaChi = user.DiaChi,
                         Email = user.Email,
@@ -154,6 +158,7 @@ namespace SmartClassAPI.Repository.UserRepo
                     {
                         IdUser = user.IdUser,
                         UserName = user.UserName,
+                        MatKhau = user.MatKhau,  // Mới thêm ở đây
                         HoTen = user.HoTen,
                         DiaChi = user.DiaChi,
                         Email = user.Email,
@@ -177,6 +182,7 @@ namespace SmartClassAPI.Repository.UserRepo
                     IdUser = u.IdUser,
                     HoTen = u.HoTen,
                     UserName = u.UserName,
+                    MatKhau = u.MatKhau,  // Mới thêm ở đây
                     DiaChi = u.DiaChi,
                     Email = u.Email,
                     DienThoai = u.DienThoai,
@@ -195,6 +201,7 @@ namespace SmartClassAPI.Repository.UserRepo
                     IdUser = u.IdUser,
                     HoTen = u.HoTen,
                     UserName = u.UserName,
+                    MatKhau = u.MatKhau, // Mới thêm ở đây
                     DiaChi = u.DiaChi,
                     Email = u.Email,
                     DienThoai = u.DienThoai,
@@ -214,6 +221,7 @@ namespace SmartClassAPI.Repository.UserRepo
             var _user = _context.Users.SingleOrDefault(u => u.IdUser == id);
 
             _user.UserName = user.UserName;
+            _user.MatKhau = user.MatKhau; // Mới thêm ở đây
             _user.HoTen = user.HoTen;
             _user.DiaChi = user.DiaChi;
             _user.DienThoai = user.DienThoai;
@@ -259,6 +267,7 @@ namespace SmartClassAPI.Repository.UserRepo
                 IdUser = u.IdUser,
                 HoTen = u.HoTen,
                 UserName = u.UserName,
+                MatKhau = u.MatKhau, // Mới thêm ở đây
                 DiaChi = u.DiaChi,
                 Email = u.Email,
                 DienThoai = u.DienThoai,
@@ -277,6 +286,7 @@ namespace SmartClassAPI.Repository.UserRepo
                 IdUser = u.IdUser,
                 HoTen = u.HoTen,
                 UserName = u.UserName,
+                MatKhau = u.MatKhau,  // Mới thêm ở đây
                 DiaChi = u.DiaChi,
                 Email = u.Email,
                 DienThoai = u.DienThoai,
