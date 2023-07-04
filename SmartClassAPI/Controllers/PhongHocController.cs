@@ -30,6 +30,11 @@ namespace SmartClassAPI.Controllers
             }
             else
             {
+                if (phongHoc.TenPhongHoc == null)
+                {
+                    // Xử lý khi TenPhongHoc là null
+                    phongHoc.TenPhongHoc = "Tên phòng học không khả dụng";
+                }
                 return Ok(phongHoc);
             }
         }
@@ -46,19 +51,6 @@ namespace SmartClassAPI.Controllers
                 return new JsonResult("Hãy điền đầy đủ thông tin!!");
             }
         }
-        //[HttpGet("/api/TinhTrang/{id}")]
-        //public IActionResult GetTinhTrang(int id)
-        //{
-        //	var phongHoc = _phonghocRepo.GetTinhTrang(id);
-        //	if (phongHoc == null)
-        //	{
-        //		return NotFound();
-        //	}
-        //	else
-        //	{
-        //		return Ok(phongHoc);
-        //	}
-        //}
         [HttpPut("{id}")]
         public IActionResult Update(int id, PhongHocVM phongHoc)
         {
