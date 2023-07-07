@@ -16,7 +16,7 @@ namespace SmartClassAPI.Model
     {
         public int IdPhongHoc { get; set; }
         public virtual List<MonHoc> MonHocs { get; internal set; }
-        //public string TenTinhTrang { get; internal set; } Hảo internal?????
+        //public string TenTinhTrang { get; internal set; } 
         public string TenTinhTrang { get; set; }
 
     }
